@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  snappass:
+    labels:
+      traefik.http.routers.pass.rule: Host(`pass.inwork.nl`)
+      traefik.http.services.pass.loadbalancer.server.port: 5000
+      traefik.http.routers.pass.tls.certresolver: "default"
+    environment:
+      HOST_OVERRIDE: "pass.inwork.nl"
+      SECRET_KEY: "X94c6FPSItAemdFY9WVgmZ5rYOHkm8XxsDpctO8LHSLSl6U3XBYhbM692Sh0UYJ2"
+      NO_SSL: false
+    restart: unless-stopped

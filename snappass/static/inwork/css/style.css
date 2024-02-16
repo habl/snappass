@@ -1,0 +1,11 @@
+.navbar {
+  min-height: 70px;
+}
+
+.navbar .container {
+  margin: 0;
+}
+
+.navbar .navbar-brand {
+  padding: 5px 15px;
+}
